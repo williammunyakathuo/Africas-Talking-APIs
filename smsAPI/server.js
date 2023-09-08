@@ -10,6 +10,11 @@ module.exports = function smsServer() {
 
     // TODO: Incoming messages route
 
+    app.post('/incoming-messages', (req, res) => {
+        const data = req.body;
+        console.log(`recieved message :  \n ${data}`);
+        res.sendStatus(200)
+    })
 
     // TODO: Delivery reports route
 
